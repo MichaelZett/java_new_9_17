@@ -3,7 +3,6 @@ package de.zettsystems.main;
 import de.zettsystems.automatic.AutomaticModule;
 import de.zettsystems.hello.HelloSayer;
 
-import java.util.ServiceLoader;
 //import de.zettsystems.goodbye.GoodbyeSayer;
 
 public class MainApp {
