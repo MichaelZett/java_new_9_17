@@ -10,9 +10,9 @@
 
     <modules>
         <module>hello</module>
-<!--        Sonst werden die Klassen auf den Modulpfad gelegt - dann fehlt die module-info.class-->
-<!--        <module>unnamed</module>-->
-<!--        <module>automatic</module>-->
+<!--   Auskommentieren, sonst werden die Klassen auf den Modulpfad gelegt - dann fehlt die module-info.class-->
+        <module>unnamed</module>
+        <module>automatic</module>
         <module>main</module>
     </modules>
 
