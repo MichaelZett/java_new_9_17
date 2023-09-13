@@ -7,8 +7,10 @@ import com.google.common.collect.ImmutableSet;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
+import java.util.function.Predicate;
 
 import static java.util.function.Predicate.not;
 import static java.util.stream.Collectors.counting;
@@ -23,7 +25,7 @@ public class SomeClass {
         String[] anArray = convertToArray(aList);
         Arrays.stream(anArray).forEach(System.out::println);
 
-        aList.stream().filter(not(String::isBlank)).forEach(System.out::println);
+        aList.stream().filter(Objects::nonNull).filter(Predicate.not(String::isBlank)).forEach(System.out::println);
     }
 
     private static boolean isNotBlank(String string) {

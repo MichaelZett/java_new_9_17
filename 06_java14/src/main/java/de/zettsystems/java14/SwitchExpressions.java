@@ -49,11 +49,12 @@ public class SwitchExpressions {
         Day day = Day.WEDNESDAY;
         switch (day) {
             case MONDAY, FRIDAY, SUNDAY -> numLetters = 6;
-            case TUESDAY                -> numLetters = 7;
-            case THURSDAY, SATURDAY     -> numLetters = 8;
-            case WEDNESDAY              -> numLetters = 9;
+            case TUESDAY -> numLetters = 7;
+            case THURSDAY, SATURDAY -> numLetters = 8;
+            case WEDNESDAY -> numLetters = 9;
             default -> throw new IllegalStateException("Invalid day: " + day);
-        };
+        }
+        ;
         System.out.println(numLetters);
     }
 
@@ -66,10 +67,13 @@ public class SwitchExpressions {
         Day day = Day.WEDNESDAY;
         System.out.println(
                 switch (day) {
-                    case MONDAY, FRIDAY, SUNDAY -> 6;
-                    case TUESDAY                -> 7;
-                    case THURSDAY, SATURDAY     -> 8;
-                    case WEDNESDAY              -> 9;
+                    case MONDAY, FRIDAY, SUNDAY -> {
+                        int zahl = 5;
+                        yield zahl + 1;
+                    }
+                    case TUESDAY -> 7;
+                    case THURSDAY, SATURDAY -> 8;
+                    case WEDNESDAY -> 9;
                     default -> throw new IllegalStateException("Invalid day: " + day);
                 }
         );

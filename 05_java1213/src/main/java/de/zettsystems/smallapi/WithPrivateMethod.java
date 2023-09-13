@@ -1,4 +1,4 @@
-package de.zettsystems.java9;
+package de.zettsystems.smallapi;
 
 public interface WithPrivateMethod {
 

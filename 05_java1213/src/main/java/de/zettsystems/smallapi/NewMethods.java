@@ -13,7 +13,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class NewMethods {
-
     public static void main(String[] args) throws IOException {
         stringMethods();
         fileMethods();
@@ -57,7 +56,7 @@ public class NewMethods {
     }
 
     /**
-     * mismatch
+     * mismatch, Files.writeString, Files.readString
      */
     public static void fileMethods() throws IOException {
         System.out.println("**************_File_**************");
@@ -94,7 +93,7 @@ public class NewMethods {
         List<String> sampleList = Arrays.asList("Java", "\n \n", "Kotlin", " ");
         List<String> withoutBlanks = sampleList.stream()
                 .filter(Predicate.not(String::isBlank))
-                .collect(Collectors.toList());
+                .toList();
         System.out.println("Lists are equal: " + (withoutBlanks.equals(List.of("Java", "Kotlin"))));
     }
 
