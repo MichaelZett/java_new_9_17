@@ -47,7 +47,7 @@ public class TextBlocks {
 
     public static String getIgnoredNewLines() {
         return """
-                This is a long test which looks to \
+                This is a long text which looks to \
                 have a newline but actually does not""";
     }
 
