@@ -1,5 +1,7 @@
 package de.zettsystems.java16.records;
 
+import lombok.NonNull;
+
 import java.util.Objects;
 
 public class CustomerOldSchool {

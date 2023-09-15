@@ -34,6 +34,11 @@ public class PatternInstanceOf {
         if (obj instanceof Customer cust && cust.vip()) {
             System.out.println(cust.name() + " is VIP!");
         }
+
+//        Bei || greift der Flow Scope nicht
+//        if (obj instanceof Customer cust || cust.vip()) {
+//            System.out.println(cust.name() + " is VIP!");
+//        }
     }
 
 
