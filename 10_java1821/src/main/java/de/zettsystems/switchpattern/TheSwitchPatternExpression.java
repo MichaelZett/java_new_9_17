@@ -4,7 +4,7 @@ public class TheSwitchPatternExpression {
     public static void main(String[] args) {
         System.out.println(getDoubleUsingIf(3));
         System.out.println(getDoubleUsingSwitch(5));
-        System.out.println(getDoubleValueUsingGuardedPatterns(7));
+        System.out.println(getDoubleValueUsingGuardedPatterns("7.0"));
         System.out.println(getDoubleValueUsingParenthesizedPatterns(9));
     }
 
