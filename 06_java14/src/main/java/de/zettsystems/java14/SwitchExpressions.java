@@ -54,7 +54,7 @@ public class SwitchExpressions {
             case WEDNESDAY -> numLetters = 9;
             default -> throw new IllegalStateException("Invalid day: " + day);
         }
-        ;
+
         System.out.println(numLetters);
     }
 
