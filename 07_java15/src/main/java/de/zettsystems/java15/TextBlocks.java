@@ -10,6 +10,8 @@ public class TextBlocks {
         System.out.println(getBlockOfHtmlOldschool());
         System.out.println(getFormattedText("Wert"));
         System.out.println(getIgnoredNewLines());
+        System.out.println(preserveTrailingWhitespace());
+        System.out.println(doNotPreserveTrailingWhitespace());
         helpfulNpe(null);
     }
 
@@ -49,6 +51,24 @@ public class TextBlocks {
         return """
                 This is a long text which looks to \
                 have a newline but actually does not""";
+    }
+
+    public static String doNotPreserveTrailingWhitespace() {
+        String colors = """
+                red  
+                green
+                blue 
+                """;
+        return colors;
+    }
+
+    public static String preserveTrailingWhitespace() {
+        String colors = """
+                red  \s
+                green\s
+                blue \s
+                """;
+        return colors;
     }
 
     private static void helpfulNpe(String value) {
