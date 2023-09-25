@@ -54,6 +54,7 @@ public class LocalTypeInference {
     public void lambdaVar() {
         List<String> sampleList = Arrays.asList("Java", "Kotlin");
         String resultString = sampleList.stream()
+                .map(String::toUpperCase)
                 .map((@NotNull var x) -> x.toUpperCase())
                 .collect(Collectors.joining(", "));
         System.out.println("Strings are equal: " + resultString.equals("JAVA, KOTLIN"));
