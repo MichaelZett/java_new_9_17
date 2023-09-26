@@ -5,7 +5,7 @@
 - Lege das java16-0.0.1.jar nach C:\tmp\input
 
 ## Run jpackage in Cmd (git bash)
-"C:\Program Files\Java\jdk-17\bin\jpackage" --input "C:\tmp\input" --dest "C:\tmp\output" --name Example --main-jar java16-0.0.1.jar --main-class de.zettsystems.java16.pattern.PatternInstanceOf --type app-image --win-console
+jpackage --input "C:\tmp\input" --dest "C:\tmp\output" --name Example --main-jar java16-0.0.1.jar --main-class de.zettsystems.java16.pattern.PatternInstanceOf --type app-image --win-console
 
 ## Run Application
 Doppelklick auf Example.exe

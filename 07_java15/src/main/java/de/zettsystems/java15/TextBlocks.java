@@ -10,8 +10,8 @@ public class TextBlocks {
         System.out.println(getBlockOfHtmlOldschool());
         System.out.println(getFormattedText("Wert"));
         System.out.println(getIgnoredNewLines());
-        System.out.println(preserveTrailingWhitespace());
         System.out.println(doNotPreserveTrailingWhitespace());
+        System.out.println(preserveTrailingWhitespace());
         helpfulNpe(null);
     }
 
@@ -41,7 +41,8 @@ public class TextBlocks {
     }
 
     public static String getFormattedText(String parameter) {
-//        String.format("Ein Parameter: %s", parameter); ist jetzt discouraged, man möge mit .formatted arbeiten
+        String.format("Ein Parameter: %s", parameter);// ist jetzt discouraged, man möge mit .formatted arbeiten
+        "Ein Parameter: %s".formatted(parameter);
         return """
                 Ein Parameter: %s
                 """.formatted(parameter);
