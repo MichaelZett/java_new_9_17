@@ -9,6 +9,9 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class UnmodifiableCollectionCreation {
+    /**
+     * @deprecated use UnmodifiableCollectionCreation#createImmutableCollectionJava instead
+     */
     // Deprecation forRemoval ist neu
     @Deprecated(forRemoval = true, since = "Java 9")
     public Collection<String> createImmutableCollection(String first, String second) {

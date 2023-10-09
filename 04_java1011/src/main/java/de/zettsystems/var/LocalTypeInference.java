@@ -64,5 +64,4 @@ public class LocalTypeInference {
         return query.equals("query") ? List.of(new Customer()) : Collections.emptyList();
     }
 
-
 }
