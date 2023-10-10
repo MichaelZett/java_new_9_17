@@ -36,14 +36,40 @@ public class TheSwitchPatternExpression {
 
     static double getDoubleValueUsingGuardedPatterns(Object o) {
         return switch (o) {
-            case String s && s.length() > 0 -> Double.parseDouble(s);
+            case Integer i -> i.doubleValue();
+            case Float f -> f.doubleValue();
+            case String s && !s.isEmpty() -> Double.parseDouble(s);
             default -> 0d;
         };
     }
 
+    // In Java 21 hat sich ein wenig geändert. Weitere Bedingungen müssen nun mit 'when' eingeleitet werden.
+    // Es gibt die Möglichkeit des null-Labels.
+//    static double getDoubleValueUsingGuardedPatterns(Object o) {
+//        return switch (o) {
+//            case null -> -1d;
+//            case Integer i -> i.doubleValue();
+//            case Float f -> f.doubleValue();
+//            case String s when !s.isEmpty() -> Double.parseDouble(s);
+//            default -> 0d;
+//        };
+//    }
+//
+//    static double getDoubleValueUsingParenthesizedPatterns(Object o) {
+//        return switch (o) {
+//            case null -> -1d;
+//            case Integer i -> i.doubleValue();
+//            case Float f -> f.doubleValue();
+//            case String s when !s.isEmpty() && !(s.contains("#") || s.contains("@")) -> Double.parseDouble(s);
+//            default -> 0d;
+//        };
+//    }
+
     static double getDoubleValueUsingParenthesizedPatterns(Object o) {
         return switch (o) {
-            case String s && s.length() > 0 && !(s.contains("#") || s.contains("@")) -> Double.parseDouble(s);
+            case Integer i -> i.doubleValue();
+            case Float f -> f.doubleValue();
+            case String s && !s.isEmpty() && !(s.contains("#") || s.contains("@")) -> Double.parseDouble(s);
             default -> 0d;
         };
     }
