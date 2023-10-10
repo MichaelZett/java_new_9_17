@@ -65,9 +65,9 @@ public class TextBlocks {
 
     public static String preserveTrailingWhitespace() {
         String colors = """
-                red  \s
-                green\s
-                blue \s
+                red \s
+                green
+                blue\s
                 """;
         return colors;
     }

@@ -2,7 +2,7 @@ package de.zettsystems.java16.records;
 
 import java.util.Objects;
 
-public class CustomerOldSchool {
+public final class CustomerOldSchool {
     private final String name;
     private final boolean vip;
 
@@ -11,10 +11,16 @@ public class CustomerOldSchool {
         this.vip = vip;
     }
 
+    /**
+     * Im record: name()
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Im record: vip()
+     */
     public boolean isVip() {
         return vip;
     }
@@ -32,6 +38,9 @@ public class CustomerOldSchool {
         return Objects.hash(name, vip);
     }
 
+    /**
+     * Im record anstatt {} []...
+     */
     @Override
     public String toString() {
         return "CustomerOldSchool{" +

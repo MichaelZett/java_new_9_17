@@ -54,6 +54,7 @@ public class SomeClass {
     }
 
     public static String[] convertToArray(List<String> sampleList) {
+//        return sampleList.toArray(new String[0]);
         return sampleList.toArray(String[]::new);
     }
 
