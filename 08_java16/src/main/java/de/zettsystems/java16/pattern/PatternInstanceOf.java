@@ -36,10 +36,10 @@ public class PatternInstanceOf {
         }
 
 //        Bei || greift der Flow Scope nicht
+
 //        if (obj instanceof Customer cust || cust.vip()) {
 //            System.out.println(cust.name() + " is VIP!");
 //        }
     }
-
 
 }

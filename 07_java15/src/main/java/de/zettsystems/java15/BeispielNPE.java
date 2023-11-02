@@ -13,7 +13,7 @@ public class BeispielNPE {
     /**
      * Fehlermeldung früher:
      * Exception in thread "main" java.lang.NullPointerException
-     *     at BeispielNPE.main(BeispielNPE.java:15)
+     *     at BeispielNPE.main(BeispielNPE.java:20)
      */
     public static void main(String[] args) {
         Person person = new Person();

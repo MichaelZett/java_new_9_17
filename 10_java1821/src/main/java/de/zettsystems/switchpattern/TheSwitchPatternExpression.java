@@ -73,4 +73,11 @@ public class TheSwitchPatternExpression {
             default -> 0d;
         };
     }
+
+    static double useSealedHierarchy(Shape o) {
+        return switch (o) {
+            case Circle i -> i.middle();
+            case Rectangle f -> f.lowerLeft();
+        };
+    }
 }
