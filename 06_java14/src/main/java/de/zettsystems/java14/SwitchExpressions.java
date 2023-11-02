@@ -16,7 +16,7 @@ public class SwitchExpressions {
      */
     public static void oldSwitchStatement() {
         System.out.println("**************_Switch Statement_**************");
-        int numLetters = 0;
+        int numLetters;
         Day day = Day.WEDNESDAY;
         switch (day) {
             case MONDAY:
@@ -45,7 +45,7 @@ public class SwitchExpressions {
      */
     public static void enhancedSwitchStatement() {
         System.out.println("**************_Enhanced Switch Statement_**************");
-        int numLetters = 0;
+        int numLetters;
         Day day = Day.WEDNESDAY;
         switch (day) {
             case MONDAY, FRIDAY, SUNDAY -> numLetters = 6;

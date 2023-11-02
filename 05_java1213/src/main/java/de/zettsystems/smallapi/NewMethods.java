@@ -85,6 +85,8 @@ public class NewMethods {
         System.out.println("**************_Collections_**************");
         List<String> sampleList = Arrays.asList("Java", "Kotlin");
         String[] sampleArray = sampleList.toArray(String[]::new);
+        String[] sampleArrayOld = sampleList.toArray(new String[0]);
+
         System.out.println("Arrays are equal: " + (Arrays.equals(sampleArray, new String[]{"Java", "Kotlin"})));
     }
 
