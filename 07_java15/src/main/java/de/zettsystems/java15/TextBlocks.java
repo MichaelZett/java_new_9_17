@@ -12,7 +12,6 @@ public class TextBlocks {
         System.out.println(getIgnoredNewLines());
         System.out.println(doNotPreserveTrailingWhitespace());
         System.out.println(preserveTrailingWhitespace());
-        helpfulNpe(null);
     }
 
     private static String getSimpleTextBlock() {
@@ -24,7 +23,7 @@ public class TextBlocks {
     public static String getBlockOfHtml() {
         return """
                 <html>
-
+                    
                     <body>
                         <span>example text</span>
                     </body>
@@ -70,10 +69,6 @@ public class TextBlocks {
                 blue\s
                 """;
         return colors;
-    }
-
-    private static void helpfulNpe(String value) {
-        System.out.println(value.isBlank());
     }
 
 }
