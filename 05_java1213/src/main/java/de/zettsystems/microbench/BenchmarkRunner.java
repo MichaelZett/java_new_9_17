@@ -8,7 +8,8 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 public class BenchmarkRunner {
 
     public static void main(String[] args) throws RunnerException {
-        Options opt = new OptionsBuilder().include(NumberVerificationComparisonBenchmark.class.getSimpleName()).build();
+        Options opt = new OptionsBuilder().include(
+                NumberVerificationComparisonBenchmark.class.getSimpleName()).build();
 
         new Runner(opt).run();
     }

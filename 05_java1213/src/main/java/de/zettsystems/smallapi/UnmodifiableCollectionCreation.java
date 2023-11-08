@@ -2,10 +2,7 @@ package de.zettsystems.smallapi;
 
 import com.google.common.collect.ImmutableList;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class UnmodifiableCollectionCreation {
@@ -37,6 +34,8 @@ public class UnmodifiableCollectionCreation {
     }
 
     private Collection<String> retrieveEntries() {
+        // Arrays.asList() erzeugt auch UnmodifiableList.
         return Arrays.asList("A", "B");
     }
+
 }
