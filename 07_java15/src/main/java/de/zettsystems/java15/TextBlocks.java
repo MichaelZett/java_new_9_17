@@ -27,7 +27,7 @@ public class TextBlocks {
                     <body>
                         <span>example text</span>
                     </body>
-                </html>""";
+                 </html>""";
     }
 
     public static String getBlockOfHtmlOldschool() {

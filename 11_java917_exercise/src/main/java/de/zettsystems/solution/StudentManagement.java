@@ -46,7 +46,6 @@ public class StudentManagement {
             String status = switch (student) {
                 case Undergraduate u -> "Undergraduate";
                 case Graduate g -> "Graduate";
-                default -> "Unknown";
             };
             System.out.println(student.name() + " is a " + status + " student.");
         });

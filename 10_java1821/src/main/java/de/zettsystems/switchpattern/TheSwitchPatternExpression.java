@@ -1,5 +1,7 @@
 package de.zettsystems.switchpattern;
 
+import java.awt.*;
+
 public class TheSwitchPatternExpression {
     public static void main(String[] args) {
         System.out.println(getDoubleUsingIf(3));
@@ -80,4 +82,11 @@ public class TheSwitchPatternExpression {
             case Rectangle f -> f.lowerLeft();
         };
     }
+
+//    static Object useSealedHierarchyRecordPattern(Shape o) {
+//        return switch (o) {
+//            case Circle(Point middle) -> middle;
+//            case Rectangle(Point lowerLeft, var u) -> lowerLeft;
+//        };
+//    }
 }

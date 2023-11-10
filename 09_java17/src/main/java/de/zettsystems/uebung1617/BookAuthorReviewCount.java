@@ -2,7 +2,7 @@ package de.zettsystems.uebung1617;
 
 import java.util.Objects;
 
-// TODO use new java api
+// TODO use new java api, make more compact
 public class BookAuthorReviewCount {
     private final String title;
     private final String author;
