@@ -1,14 +1,20 @@
 package de.zettsystems.smallapi;
 
-import java.util.Objects;
+import java.util.Collections;
+import java.util.List;
 import java.util.Optional;
 
 public class OptionalStream {
 
-    public void showThatStream(String value) {
-        Optional.ofNullable(value)
-                .stream()
-                .filter(Objects::nonNull)
-                .forEach(System.out::println);
+    public List<String> showWithoutStream(Optional<String> optionalValue) {
+        List<String> result = optionalValue.isPresent()
+                ? Collections.singletonList(optionalValue.get())
+                : Collections.emptyList();
+        return result;
+    }
+
+    public List<String> showWithStream(Optional<String> optionalValue) {
+        List<String> result = optionalValue.stream().toList();
+        return result;
     }
 }
