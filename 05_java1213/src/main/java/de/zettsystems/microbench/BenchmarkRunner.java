@@ -9,8 +9,8 @@ public class BenchmarkRunner {
 
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()
-                .include(NumberVerificationComparisonBenchmark.class.getSimpleName())
-//                .include(ToArrayBench.class.getSimpleName())
+//                .include(NumberVerificationComparisonBenchmark.class.getSimpleName())
+                .include(ToArrayBench.class.getSimpleName())
                 .build();
 
         new Runner(opt).run();

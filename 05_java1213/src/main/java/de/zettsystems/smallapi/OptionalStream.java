@@ -16,7 +16,6 @@ public class OptionalStream {
 
     public List<String> showWithStream(Optional<String> optionalValue) {
         List<String> result = optionalValue.stream().toList();
-        optionalValue.stream().collect(Collectors.toList());
         return result;
     }
 }

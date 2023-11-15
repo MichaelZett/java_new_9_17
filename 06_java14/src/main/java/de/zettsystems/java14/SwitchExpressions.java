@@ -74,6 +74,7 @@ public class SwitchExpressions {
                     case TUESDAY -> 7;
                     case THURSDAY, SATURDAY -> 8;
                     case WEDNESDAY -> 9;
+                    // default hier nicht nötig und Anti-Pattern
                     default -> throw new IllegalStateException("Invalid day: " + day);
                 }
         );
@@ -99,8 +100,6 @@ public class SwitchExpressions {
                 yield 8;
             case WEDNESDAY:
                 yield 9;
-            default:
-                throw new IllegalStateException("Invalid day: " + day);
         };
         System.out.println(numLetters);
     }
