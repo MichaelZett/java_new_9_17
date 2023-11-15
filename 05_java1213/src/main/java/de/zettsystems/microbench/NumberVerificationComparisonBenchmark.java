@@ -16,7 +16,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
 /* To run a short example benchmark, uncomment this code:*/
-@Fork(1)
+@Fork(value=1, jvmArgsAppend = {"-XX:+UseParallelGC", "-Xms8g", "-Xmx8g"})
 @Warmup(iterations = 1)
 @Measurement(iterations = 1)
 @State(Scope.Benchmark)

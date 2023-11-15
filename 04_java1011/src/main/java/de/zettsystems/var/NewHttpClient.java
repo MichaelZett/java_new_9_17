@@ -21,8 +21,8 @@ import java.time.Duration;
 public class NewHttpClient {
     public static void main(String[] args) throws IOException, InterruptedException, URISyntaxException {
         useNewJava11HttpApi();
-//        useOldJavaApi();
-//        useApacheHttpClient();
+        useOldJavaApi();
+        useApacheHttpClient();
     }
 
     private static void useApacheHttpClient() {
