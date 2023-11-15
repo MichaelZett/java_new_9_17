@@ -25,14 +25,15 @@ https://docs.oracle.com/en/java/javase/11/tools/jlink.html#GUID-CECAC52B-CFEE-46
 # Create minimal JRE
 jlink --strip-debug --compress 2 --no-header-files --no-man-pages --output ./mincustomjre/ --module-path "C:\Program Files\Eclipse Adoptium\jdk-17.0.8.101-hotspot\jmods" --add-modules java.base
 # Vergleich
-- jdk17 	: 290 MB
+- jdk17 	: 299 MB
+- jdk17-jre : 120 MB
 - customjdk	:  45 MB
 - minjdk	:  25 MB
 
 # List Modules
 ./customjre/bin/java --list-modules
 ./mincustomjre/bin/java --list-modules
-java --list-modules
+cd modul
 
 # Use Custom Jre
 ./customjre/bin/java -p modules -m de.zettsystems.main/de.zettsystems.main.MainApp 
