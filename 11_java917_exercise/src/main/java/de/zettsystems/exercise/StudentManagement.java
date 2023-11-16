@@ -1,24 +1,22 @@
 package de.zettsystems.exercise;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class StudentManagement {
     // TODO make more readable
-    private static final String html = "<!DOCTYPE html>\n" +
-            "            <html>\n" +
-            "            <head>\n" +
-            "                <title>HTML mit Text Block</title>\n" +
-            "            </head>\n" +
-            "            <body>\n" +
-            "                <h1>Willkommen in meiner HTML-Seite</h1>\n" +
-            "                <p>Dies ist ein einfaches HTML-Beispiel.</p>\n" +
-            "            </body>\n" +
-            "            </html>";
+    private static final String html = """
+            <!DOCTYPE html>
+                        <html>
+                        <head>
+                            <title>HTML mit Text Block</title>
+                        </head>
+                        <body>
+                            <h1>Willkommen in meiner HTML-Seite</h1>
+                            <p>Dies ist ein einfaches HTML-Beispiel.</p>
+                        </body>
+                        </html>\
+            """;
 
     public static void main(String[] args) {
         // TODO make List immutable, improve readability
@@ -29,12 +27,10 @@ public class StudentManagement {
 
         // TODO make more compact
         for (Student student : x) {
-            if (student instanceof Undergraduate) {
-                Undergraduate undergrad = (Undergraduate) student;
-                System.out.println(undergrad.getName() + " is an Undergraduate student.");
-            } else if (student instanceof Graduate) {
-                Graduate grad = (Graduate) student;
-                System.out.println(grad.getName() + " is a Graduate student.");
+            if (student instanceof Undergraduate undergrad) {
+                System.out.printf("%s is an Undergraduate student.", undergrad.getName());
+            } else if (student instanceof Graduate grad) {
+                System.out.printf("%s is a Graduate student.", grad.getName());
             }
         }
 
@@ -44,6 +40,7 @@ public class StudentManagement {
                 .filter(s -> s.getAge() >= 18)
                 .collect(Collectors.toUnmodifiableList());
 
+        // TODO use new method for String
         collect.forEach(student -> System.out.println(student.getName() + " is an adult student."));
 
         // TODO make more compact
@@ -56,6 +53,7 @@ public class StudentManagement {
             } else {
                 status = "Unknown";
             }
+            // TODO use new method for String
             System.out.println(student.getName() + " is a " + status + " student.");
         });
 
@@ -84,8 +82,8 @@ public class StudentManagement {
             averageAgeByGender.put(gender, averageAge);
         }
 
-        System.out.println("Average Age for Females: " + averageAgeByGender.get(Gender.FEMALE));
-        System.out.println("Average Age for Males: " + averageAgeByGender.get(Gender.MALE));
+        System.out.printf("Average Age for Females: %s%n", averageAgeByGender.get(Gender.FEMALE));
+        System.out.printf("Average Age for Males: %s%n", averageAgeByGender.get(Gender.MALE));
     }
 }
 
@@ -129,6 +127,7 @@ class Undergraduate implements Student {
 
 }
 
+// TODO Reduce Boilerplate
 class Graduate implements Student {
     private final String name;
     private final int age;

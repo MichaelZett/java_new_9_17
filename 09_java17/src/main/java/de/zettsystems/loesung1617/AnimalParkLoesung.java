@@ -9,7 +9,8 @@ public class AnimalParkLoesung {
         }
 
         AnimalLoesung dog2 = new DogLoesung("Bob");
-        System.out.println("\nAre both equal? " + dog1.equals(dog2));
+        System.out.println("\nAre both equal? %s".formatted(dog1.equals(dog2)));
+//        System.out.printf("\nAre both equal? %s%n", dog1.equals(dog2));
     }
 
     static void play(DogLoesung d) {

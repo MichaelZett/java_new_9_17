@@ -11,6 +11,7 @@ public class AnimalPark {
         }
 
         Animal dog2 = new Dog("Bob");
+        // TODO use new Java api
         System.out.println("\nAre both equal? " + dog1.equals(dog2));
     }
 

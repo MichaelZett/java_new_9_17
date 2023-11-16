@@ -29,9 +29,9 @@ public class StudentManagement {
 
         for (Student student : studentList) {
             if (student instanceof Undergraduate undergrad) {
-                System.out.println(undergrad.name() + " is an Undergraduate student.");
+                System.out.printf("%s is an Undergraduate student.", undergrad.name());
             } else if (student instanceof Graduate grad) {
-                System.out.println(grad.name() + " is a Graduate student.");
+                System.out.printf("%s is a Graduate student.", grad.name());
             }
         }
 
@@ -40,14 +40,14 @@ public class StudentManagement {
                 .filter(s -> s.age() >= 18)
                 .toList();
 
-        adultStudents.forEach(student -> System.out.println(student.name() + " is an adult student."));
+        adultStudents.forEach(student -> System.out.println("%s is an adult student.".formatted(student.name())));
 
         adultStudents.forEach(student -> {
             String status = switch (student) {
                 case Undergraduate u -> "Undergraduate";
                 case Graduate g -> "Graduate";
             };
-            System.out.println(student.name() + " is a " + status + " student.");
+            System.out.println("%s is a %s student.".formatted(student.name(), status));
         });
 
         printAverageByGender(studentList);
@@ -72,8 +72,8 @@ public class StudentManagement {
                         }
                 ));
 
-        System.out.println("Average Age for Females: " + averageAgeByGender.get(Gender.FEMALE));
-        System.out.println("Average Age for Males: " + averageAgeByGender.get(Gender.MALE));
+        System.out.printf("Average Age for Females: %s%n", averageAgeByGender.get(Gender.FEMALE));
+        System.out.printf("Average Age for Males: %s%n", averageAgeByGender.get(Gender.MALE));
     }
 }
 

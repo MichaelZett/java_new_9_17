@@ -1,4 +1,4 @@
 package de.zettsystems.java17;
 
-public final class SealedInterfaceOnly implements SealedInterface {
+public non-sealed interface SealedInterfaceOnly extends SealedInterface {
 }
