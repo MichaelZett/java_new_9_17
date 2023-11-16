@@ -12,3 +12,6 @@ Doppelklick auf Example.exe
 
 ## Docs
 https://docs.oracle.com/en/java/javase/17/docs/specs/man/jpackage.html
+
+# jpackage mit jlink
+jpackage --type exe --input "C:\tmp\input" --module de.zettsystems.main/de.zettsystems.main.MainApp --runtime-image "C:\tmp\mincustomjre" --name MainApp --dest "C:\tmp\output" --module-path "C:\tmp\module_input" --win-console
