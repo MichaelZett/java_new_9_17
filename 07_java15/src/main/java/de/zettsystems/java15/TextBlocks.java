@@ -10,6 +10,7 @@ public class TextBlocks {
         System.out.println(getBlockOfHtmlOldschool());
         System.out.println(getFormattedText("Wert"));
         System.out.println(getIgnoredNewLines());
+        System.out.println(printABackslashLines());
         System.out.println(doNotPreserveTrailingWhitespace());
         System.out.println(preserveTrailingWhitespace());
     }
@@ -27,7 +28,8 @@ public class TextBlocks {
                     <body>
                         <span>example text</span>
                     </body>
-                 </html>""";
+                </html>
+                """;
     }
 
     public static String getBlockOfHtmlOldschool() {
@@ -50,6 +52,12 @@ public class TextBlocks {
     public static String getIgnoredNewLines() {
         return """
                 This is a long text which looks to \
+                have a newline but actually does not""";
+    }
+
+    public static String printABackslashLines() {
+        return """
+                This is a long text which looks to \\
                 have a newline but actually does not""";
     }
 
