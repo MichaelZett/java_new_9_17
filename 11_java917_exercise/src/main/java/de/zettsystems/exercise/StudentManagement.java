@@ -5,18 +5,16 @@ import java.util.stream.Collectors;
 
 public class StudentManagement {
     // TODO make more readable
-    private static final String html = """
-            <!DOCTYPE html>
-                        <html>
-                        <head>
-                            <title>HTML mit Text Block</title>
-                        </head>
-                        <body>
-                            <h1>Willkommen in meiner HTML-Seite</h1>
-                            <p>Dies ist ein einfaches HTML-Beispiel.</p>
-                        </body>
-                        </html>\
-            """;
+    private static final String html = "<!DOCTYPE html>\n" +
+            "<html>\n" +
+            "<head>\n" +
+            "    <title>HTML mit Text Block</title>\n" +
+            "</head>\n" +
+            "<body>\n" +
+            "    <h1>Willkommen in meiner HTML-Seite</h1>\n" +
+            "    <p>Dies ist ein einfaches HTML-Beispiel.</p>\n" +
+            "</body>\n" +
+            "</html>";
 
     public static void main(String[] args) {
         // TODO make List immutable, improve readability
@@ -27,9 +25,11 @@ public class StudentManagement {
 
         // TODO make more compact
         for (Student student : x) {
-            if (student instanceof Undergraduate undergrad) {
+            if (student instanceof Undergraduate) {
+                Undergraduate undergrad = (Undergraduate) student;
                 System.out.printf("%s is an Undergraduate student.", undergrad.getName());
-            } else if (student instanceof Graduate grad) {
+            } else if (student instanceof Graduate) {
+                Graduate grad = (Graduate) student;
                 System.out.printf("%s is a Graduate student.", grad.getName());
             }
         }

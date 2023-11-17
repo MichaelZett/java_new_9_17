@@ -61,7 +61,7 @@
                     <configuration>
                         <activeRecipes>
                             <recipe>org.openrewrite.java.migrate.UpgradeToJava17</recipe>
-                            <recipe>de.zettsystems.UseToList</recipe>
+                            <!--                            <recipe>de.zettsystems.UseToList</recipe>-->
                         </activeRecipes>
                     </configuration>
                     <dependencies>
@@ -70,11 +70,11 @@
                             <artifactId>rewrite-migrate-java</artifactId>
                             <version>2.1.0</version>
                         </dependency>
-                        <dependency>
-                            <groupId>de.zettsystems</groupId>
-                            <artifactId>java17-the-missing-recipe</artifactId>
-                            <version>0.0.1</version>
-                        </dependency>
+                        <!--                        <dependency>-->
+                        <!--                            <groupId>de.zettsystems</groupId>-->
+                        <!--                            <artifactId>zettsystems-recipes</artifactId>-->
+                        <!--                            <version>0.1.0</version>-->
+                        <!--                        </dependency>-->
                     </dependencies>
                 </plugin>
             </plugins>
