@@ -79,7 +79,7 @@ public class NewHttpClient {
         connection.disconnect();
     }
 
-    private static void useNewJava11HttpApi() throws URISyntaxException, IOException, InterruptedException {
+    private static void useNewJava11HttpApi() throws URISyntaxException {
         HttpClient client = HttpClient.newBuilder()
                 .version(HttpClient.Version.HTTP_2)
                 .connectTimeout(Duration.ofSeconds(20))

@@ -23,6 +23,7 @@ public class LocalTypeInference {
         List<Customer> x = executeQuery("query");
         // GOOD
         var customerList = executeQuery("query");
+        List<Customer> customers = executeQuery("query");
 
         // ORIGINAL
         ByteArrayOutputStream outStream = new ByteArrayOutputStream();
