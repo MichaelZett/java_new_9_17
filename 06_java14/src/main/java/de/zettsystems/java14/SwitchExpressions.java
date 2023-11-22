@@ -75,7 +75,7 @@ public class SwitchExpressions {
                     case THURSDAY, SATURDAY -> 8;
                     case WEDNESDAY -> 9;
                     // default hier nicht nötig und Anti-Pattern
-                    default -> throw new IllegalStateException("Invalid day: " + day);
+//                    default -> throw new IllegalStateException("Invalid day: " + day);
                 }
         );
     }

@@ -58,7 +58,7 @@ public class TextBlocks {
     public static String printABackslashLines() {
         return """
                 This is a long text which looks to \\
-                have a newline but actually does not""";
+                have a newline and has it""";
     }
 
     public static String doNotPreserveTrailingWhitespace() {
