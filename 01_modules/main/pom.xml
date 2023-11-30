@@ -19,7 +19,7 @@
         </dependency>
         <dependency>
             <groupId>de.zettsystems</groupId>
-            <artifactId>automatic</artifactId>
+            <artifactId>legacy</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
     </dependencies>
