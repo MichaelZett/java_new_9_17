@@ -38,3 +38,4 @@ cd modul
 # Use Custom Jre
 ./customjre/bin/java -p modules -m de.zettsystems.main/de.zettsystems.main.MainApp 
 ./mincustomjre/bin/java -p modules -m de.zettsystems.main/de.zettsystems.main.MainApp 
+
