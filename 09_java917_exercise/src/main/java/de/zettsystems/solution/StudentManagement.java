@@ -10,13 +10,13 @@ public class StudentManagement {
     private static final String html = """
             <!DOCTYPE html>
                         <html>
-                        <head>
-                            <title>HTML mit Text Block</title>
-                        </head>
-                        <body>
-                            <h1>Willkommen in meiner HTML-Seite</h1>
-                            <p>Dies ist ein einfaches HTML-Beispiel.</p>
-                        </body>
+                <head>
+                    <title>HTML mit Text Block</title>
+                </head>
+                <body>
+                    <h1>Willkommen in meiner HTML-Seite</h1>
+                    <p>Dies ist ein einfaches HTML-Beispiel.</p>
+                </body>
                         </html>\
             """;
 
