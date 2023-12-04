@@ -30,9 +30,11 @@ public class StudentManagement {
 
         // TODO make more compact
         for (Student student : x) {
-            if (student instanceof Undergraduate undergrad) {
+            if (student instanceof Undergraduate) {
+                Undergraduate undergrad = (Undergraduate) student;
                 System.out.printf("%s is an Undergraduate student.", undergrad.getName());
-            } else if (student instanceof Graduate grad) {
+            } else if (student instanceof Graduate) {
+                Graduate grad = (Graduate) student;
                 System.out.printf("%s is a Graduate student.", grad.getName());
             }
         }
@@ -41,7 +43,7 @@ public class StudentManagement {
         List<Student> collect = x.stream()
                 .peek(System.out::println)
                 .filter(s -> s.getAge() >= 18)
-                .toList();
+                .collect(Collectors.toUnmodifiableList());
 
         // TODO use new method for String
         collect.forEach(student -> System.out.println(student.getName() + " is an adult student."));
